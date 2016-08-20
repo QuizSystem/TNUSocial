@@ -1,17 +1,20 @@
 PODS:
+  - iOS-Slide-Menu (1.5)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
   - TPKeyboardAvoiding (1.3)
 
 DEPENDENCIES:
+  - iOS-Slide-Menu
   - SDWebImage
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
+  iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
 
-PODFILE CHECKSUM: 8a5fa724cdb739bd5f40e477fed3769c0dfc1687
+PODFILE CHECKSUM: 7655e9e8014eeaca5f2059ed4046c9c813ccc719
 
 COCOAPODS: 1.0.1
