@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */; };
 		F8118CA81D682A53001180DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CA71D682A53001180DC /* main.m */; };
 		F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CAA1D682A53001180DC /* AppDelegate.m */; };
 		F8118CB31D682A53001180DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8118CB21D682A53001180DC /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.release.xcconfig"; sourceTree = "<group>"; };
+		766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.debug.xcconfig"; sourceTree = "<group>"; };
+		AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNUSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8118CA31D682A53001180DC /* TNUSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNUSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8118CA71D682A53001180DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8118CA91D682A53001180DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A9BCE4C4F8F665036A80D41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */,
+				0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96BD92A6C1992BD00C8EF1D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8118C9A1D682A53001180DC = {
 			isa = PBXGroup;
 			children = (
 				F8118CA51D682A53001180DC /* TNUSocial */,
 				F8118CA41D682A53001180DC /* Products */,
+				4A9BCE4C4F8F665036A80D41 /* Pods */,
+				96BD92A6C1992BD00C8EF1D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8118CBA1D682A54001180DC /* Build configuration list for PBXNativeTarget "TNUSocial" */;
 			buildPhases = (
+				A2E73F9F007069037521F638 /* [CP] Check Pods Manifest.lock */,
 				F8118C9F1D682A53001180DC /* Sources */,
 				F8118CA01D682A53001180DC /* Frameworks */,
 				F8118CA11D682A53001180DC /* Resources */,
+				FB853A70E893B9DA70367457 /* [CP] Embed Pods Frameworks */,
+				671DB5CA00DCB7EA7C07D941 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +186,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		671DB5CA00DCB7EA7C07D941 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E73F9F007069037521F638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB853A70E893B9DA70367457 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8118C9F1D682A53001180DC /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		F8118CBB1D682A54001180DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TNUSocial/Info.plist;
@@ -280,6 +356,7 @@
 		};
 		F8118CBC1D682A54001180DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TNUSocial/Info.plist;
