@@ -14,15 +14,9 @@
 		F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8118CB41D682A53001180DC /* LaunchScreen.storyboard */; };
 		F8118CBF1D682C49001180DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8118CBE1D682C49001180DC /* Main.storyboard */; };
 		F83C64E01D6863D90074200A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64DF1D6863D90074200A /* MenuViewController.m */; };
-		F83C64E21D6863ED0074200A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83C64E11D6863ED0074200A /* Menu.storyboard */; };
-		F83C64EB1D68D9160074200A /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64EA1D68D9160074200A /* CustomTabBarViewController.m */; };
 		F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F01D68D9B60074200A /* ThangViewController.m */; };
 		F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */; };
 		F83C64F71D68D9E40074200A /* GhiChuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F61D68D9E40074200A /* GhiChuViewController.m */; };
-		F83C64F91D68D9F90074200A /* Thang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83C64F81D68D9F90074200A /* Thang.storyboard */; };
-		F83C64FB1D68DA110074200A /* ThongBao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83C64FA1D68DA110074200A /* ThongBao.storyboard */; };
-		F83C64FD1D68DA220074200A /* GhiChu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83C64FC1D68DA220074200A /* GhiChu.storyboard */; };
-		F8C2BF711D682D9200F3533C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF701D682D9200F3533C /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,20 +33,12 @@
 		F8118CBE1D682C49001180DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = UI/Main.storyboard; sourceTree = "<group>"; };
 		F83C64DE1D6863D90074200A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controller/MenuViewController.h; sourceTree = "<group>"; };
 		F83C64DF1D6863D90074200A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controller/MenuViewController.m; sourceTree = "<group>"; };
-		F83C64E11D6863ED0074200A /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = UI/Menu.storyboard; sourceTree = "<group>"; };
-		F83C64E91D68D9160074200A /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarViewController.h; path = Controller/CustomTabBarViewController.h; sourceTree = "<group>"; };
-		F83C64EA1D68D9160074200A /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarViewController.m; path = Controller/CustomTabBarViewController.m; sourceTree = "<group>"; };
 		F83C64EF1D68D9B60074200A /* ThangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThangViewController.h; path = Controller/ThangViewController.h; sourceTree = "<group>"; };
 		F83C64F01D68D9B60074200A /* ThangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThangViewController.m; path = Controller/ThangViewController.m; sourceTree = "<group>"; };
 		F83C64F21D68D9CD0074200A /* ThongBaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThongBaoViewController.h; path = Controller/ThongBaoViewController.h; sourceTree = "<group>"; };
 		F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThongBaoViewController.m; path = Controller/ThongBaoViewController.m; sourceTree = "<group>"; };
 		F83C64F51D68D9E40074200A /* GhiChuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GhiChuViewController.h; path = Controller/GhiChuViewController.h; sourceTree = "<group>"; };
 		F83C64F61D68D9E40074200A /* GhiChuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GhiChuViewController.m; path = Controller/GhiChuViewController.m; sourceTree = "<group>"; };
-		F83C64F81D68D9F90074200A /* Thang.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Thang.storyboard; path = UI/Thang.storyboard; sourceTree = "<group>"; };
-		F83C64FA1D68DA110074200A /* ThongBao.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ThongBao.storyboard; path = UI/ThongBao.storyboard; sourceTree = "<group>"; };
-		F83C64FC1D68DA220074200A /* GhiChu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = GhiChu.storyboard; path = UI/GhiChu.storyboard; sourceTree = "<group>"; };
-		F8C2BF6F1D682D9200F3533C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
-		F8C2BF701D682D9200F3533C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				F8118CBE1D682C49001180DC /* Main.storyboard */,
-				F83C64E11D6863ED0074200A /* Menu.storyboard */,
-				F83C64F81D68D9F90074200A /* Thang.storyboard */,
-				F83C64FA1D68DA110074200A /* ThongBao.storyboard */,
-				F83C64FC1D68DA220074200A /* GhiChu.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -140,12 +122,8 @@
 		F8C2BF6E1D682D5800F3533C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F8C2BF6F1D682D9200F3533C /* MainViewController.h */,
-				F8C2BF701D682D9200F3533C /* MainViewController.m */,
 				F83C64DE1D6863D90074200A /* MenuViewController.h */,
 				F83C64DF1D6863D90074200A /* MenuViewController.m */,
-				F83C64E91D68D9160074200A /* CustomTabBarViewController.h */,
-				F83C64EA1D68D9160074200A /* CustomTabBarViewController.m */,
 				F83C64EF1D68D9B60074200A /* ThangViewController.h */,
 				F83C64F01D68D9B60074200A /* ThangViewController.m */,
 				F83C64F21D68D9CD0074200A /* ThongBaoViewController.h */,
@@ -216,13 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F83C64FB1D68DA110074200A /* ThongBao.storyboard in Resources */,
 				F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */,
 				F8118CB31D682A53001180DC /* Assets.xcassets in Resources */,
-				F83C64FD1D68DA220074200A /* GhiChu.storyboard in Resources */,
-				F83C64F91D68D9F90074200A /* Thang.storyboard in Resources */,
 				F8118CBF1D682C49001180DC /* Main.storyboard in Resources */,
-				F83C64E21D6863ED0074200A /* Menu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +257,7 @@
 			files = (
 				F83C64F71D68D9E40074200A /* GhiChuViewController.m in Sources */,
 				F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */,
-				F83C64EB1D68D9160074200A /* CustomTabBarViewController.m in Sources */,
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
-				F8C2BF711D682D9200F3533C /* MainViewController.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
 				F8118CA81D682A53001180DC /* main.m in Sources */,
 				F83C64E01D6863D90074200A /* MenuViewController.m in Sources */,
