@@ -24,7 +24,6 @@
 		F83C653D1D69D42A0074200A /* FDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653C1D69D42A0074200A /* FDayView.m */; };
 		F83C65401D69D4440074200A /* FDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653F1D69D4440074200A /* FDateUtility.m */; };
 		F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65421D69D45B0074200A /* FCalendarSingleton.m */; };
-		F83C65461D69D77F0074200A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65451D69D77F0074200A /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +60,6 @@
 		F83C653F1D69D4440074200A /* FDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDateUtility.m; path = Lib/FCalendarLib/FDateUtility.m; sourceTree = "<group>"; };
 		F83C65411D69D45B0074200A /* FCalendarSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCalendarSingleton.h; path = Lib/FCalendarLib/FCalendarSingleton.h; sourceTree = "<group>"; };
 		F83C65421D69D45B0074200A /* FCalendarSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCalendarSingleton.m; path = Lib/FCalendarLib/FCalendarSingleton.m; sourceTree = "<group>"; };
-		F83C65441D69D77F0074200A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
-		F83C65451D69D77F0074200A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +189,6 @@
 				F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */,
 				F83C64F51D68D9E40074200A /* GhiChuViewController.h */,
 				F83C64F61D68D9E40074200A /* GhiChuViewController.m */,
-				F83C65441D69D77F0074200A /* MainViewController.h */,
-				F83C65451D69D77F0074200A /* MainViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -330,7 +325,6 @@
 				F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */,
 				F83C65371D69D3EE0074200A /* FMonthView.m in Sources */,
 				F8118CA81D682A53001180DC /* main.m in Sources */,
-				F83C65461D69D77F0074200A /* MainViewController.m in Sources */,
 				F83C653D1D69D42A0074200A /* FDayView.m in Sources */,
 				F83C64E01D6863D90074200A /* MenuViewController.m in Sources */,
 			);
