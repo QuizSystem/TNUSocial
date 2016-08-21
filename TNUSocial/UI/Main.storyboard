@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PP8-AR-Duy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kJ-7P-Pnf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -86,34 +86,6 @@
             </objects>
             <point key="canvasLocation" x="345" y="-440"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="fRU-TD-JuH">
-            <objects>
-                <viewController id="PP8-AR-Duy" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lXA-6R-ggF"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pp9-Vw-KXq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MOE-1w-yPU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Axi-lg-CUd" customClass="FCalendarView">
-                                <rect key="frame" x="0.0" y="35" width="320" height="348"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="calView" destination="Axi-lg-CUd" id="pWT-Ng-AFG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zLJ-rX-kOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="735" y="-457"/>
-        </scene>
         <!--Thang View Controller-->
         <scene sceneID="BTk-wx-ByX">
             <objects>
@@ -125,10 +97,19 @@
                     <view key="view" contentMode="scaleToFill" id="0KW-Gc-cGW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-pu-q2Y" customClass="FCalendarView">
+                                <rect key="frame" x="0.0" y="43" width="320" height="347"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.95584028959274292" green="0.10144796222448349" blue="0.026108646765351295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="HcE-km-ZqW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="calView" destination="Seg-pu-q2Y" id="Q3X-cP-LTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcm-yL-icV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

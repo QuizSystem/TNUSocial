@@ -7,16 +7,36 @@
 //
 
 #import "ThangViewController.h"
+#import "FCalendarView.h"
+#import "FDateUtility.h"
 
-@interface ThangViewController ()
+@interface ThangViewController () <FCalendarDelegate>
 
+@property (weak, nonatomic) IBOutlet FCalendarView *calView;
 @end
 
 @implementation ThangViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Thang");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:YES dayViewHeight:-1];
+    self.calView.delegate = self;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Calendar delegate
+- (void)didSelectDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSLog(@"Date Selected : %@",[formatter stringFromDate:date]);
 }
 
 @end
