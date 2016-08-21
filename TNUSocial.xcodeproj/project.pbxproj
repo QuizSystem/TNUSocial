@@ -17,6 +17,14 @@
 		F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F01D68D9B60074200A /* ThangViewController.m */; };
 		F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */; };
 		F83C64F71D68D9E40074200A /* GhiChuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F61D68D9E40074200A /* GhiChuViewController.m */; };
+		F83C652B1D69D2E70074200A /* WeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C652A1D69D2E70074200A /* WeekCell.m */; };
+		F83C65341D69D3C80074200A /* FCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65331D69D3C80074200A /* FCalendarView.m */; };
+		F83C65371D69D3EE0074200A /* FMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65361D69D3EE0074200A /* FMonthView.m */; };
+		F83C653A1D69D4180074200A /* WeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65391D69D4180074200A /* WeekView.m */; };
+		F83C653D1D69D42A0074200A /* FDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653C1D69D42A0074200A /* FDayView.m */; };
+		F83C65401D69D4440074200A /* FDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653F1D69D4440074200A /* FDateUtility.m */; };
+		F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65421D69D45B0074200A /* FCalendarSingleton.m */; };
+		F83C65461D69D77F0074200A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65451D69D77F0074200A /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +47,22 @@
 		F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThongBaoViewController.m; path = Controller/ThongBaoViewController.m; sourceTree = "<group>"; };
 		F83C64F51D68D9E40074200A /* GhiChuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GhiChuViewController.h; path = Controller/GhiChuViewController.h; sourceTree = "<group>"; };
 		F83C64F61D68D9E40074200A /* GhiChuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GhiChuViewController.m; path = Controller/GhiChuViewController.m; sourceTree = "<group>"; };
+		F83C65291D69D2E70074200A /* WeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekCell.h; path = Lib/FCalendarLib/Cell/WeekCell.h; sourceTree = "<group>"; };
+		F83C652A1D69D2E70074200A /* WeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekCell.m; path = Lib/FCalendarLib/Cell/WeekCell.m; sourceTree = "<group>"; };
+		F83C65321D69D3C80074200A /* FCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCalendarView.h; path = Lib/FCalendarLib/FCalendarView.h; sourceTree = "<group>"; };
+		F83C65331D69D3C80074200A /* FCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCalendarView.m; path = Lib/FCalendarLib/FCalendarView.m; sourceTree = "<group>"; };
+		F83C65351D69D3EE0074200A /* FMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMonthView.h; path = Lib/FCalendarLib/FMonthView.h; sourceTree = "<group>"; };
+		F83C65361D69D3EE0074200A /* FMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMonthView.m; path = Lib/FCalendarLib/FMonthView.m; sourceTree = "<group>"; };
+		F83C65381D69D4180074200A /* WeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekView.h; path = Lib/FCalendarLib/WeekView.h; sourceTree = "<group>"; };
+		F83C65391D69D4180074200A /* WeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekView.m; path = Lib/FCalendarLib/WeekView.m; sourceTree = "<group>"; };
+		F83C653B1D69D42A0074200A /* FDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDayView.h; path = Lib/FCalendarLib/FDayView.h; sourceTree = "<group>"; };
+		F83C653C1D69D42A0074200A /* FDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDayView.m; path = Lib/FCalendarLib/FDayView.m; sourceTree = "<group>"; };
+		F83C653E1D69D4440074200A /* FDateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDateUtility.h; path = Lib/FCalendarLib/FDateUtility.h; sourceTree = "<group>"; };
+		F83C653F1D69D4440074200A /* FDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDateUtility.m; path = Lib/FCalendarLib/FDateUtility.m; sourceTree = "<group>"; };
+		F83C65411D69D45B0074200A /* FCalendarSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCalendarSingleton.h; path = Lib/FCalendarLib/FCalendarSingleton.h; sourceTree = "<group>"; };
+		F83C65421D69D45B0074200A /* FCalendarSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCalendarSingleton.m; path = Lib/FCalendarLib/FCalendarSingleton.m; sourceTree = "<group>"; };
+		F83C65441D69D77F0074200A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
+		F83C65451D69D77F0074200A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +115,7 @@
 		F8118CA51D682A53001180DC /* TNUSocial */ = {
 			isa = PBXGroup;
 			children = (
+				F83C65261D69D2850074200A /* Lib */,
 				F8C2BF6E1D682D5800F3533C /* Controller */,
 				F8118CBD1D682C1A001180DC /* UI */,
 				F8118CA91D682A53001180DC /* AppDelegate.h */,
@@ -119,6 +144,43 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		F83C65261D69D2850074200A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F83C65271D69D28D0074200A /* FCalendarLib */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		F83C65271D69D28D0074200A /* FCalendarLib */ = {
+			isa = PBXGroup;
+			children = (
+				F83C65281D69D2A30074200A /* Cell */,
+				F83C65321D69D3C80074200A /* FCalendarView.h */,
+				F83C65331D69D3C80074200A /* FCalendarView.m */,
+				F83C65351D69D3EE0074200A /* FMonthView.h */,
+				F83C65361D69D3EE0074200A /* FMonthView.m */,
+				F83C65381D69D4180074200A /* WeekView.h */,
+				F83C65391D69D4180074200A /* WeekView.m */,
+				F83C653B1D69D42A0074200A /* FDayView.h */,
+				F83C653C1D69D42A0074200A /* FDayView.m */,
+				F83C653E1D69D4440074200A /* FDateUtility.h */,
+				F83C653F1D69D4440074200A /* FDateUtility.m */,
+				F83C65411D69D45B0074200A /* FCalendarSingleton.h */,
+				F83C65421D69D45B0074200A /* FCalendarSingleton.m */,
+			);
+			name = FCalendarLib;
+			sourceTree = "<group>";
+		};
+		F83C65281D69D2A30074200A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F83C65291D69D2E70074200A /* WeekCell.h */,
+				F83C652A1D69D2E70074200A /* WeekCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		F8C2BF6E1D682D5800F3533C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +192,8 @@
 				F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */,
 				F83C64F51D68D9E40074200A /* GhiChuViewController.h */,
 				F83C64F61D68D9E40074200A /* GhiChuViewController.m */,
+				F83C65441D69D77F0074200A /* MainViewController.h */,
+				F83C65451D69D77F0074200A /* MainViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -256,10 +320,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F83C64F71D68D9E40074200A /* GhiChuViewController.m in Sources */,
+				F83C652B1D69D2E70074200A /* WeekCell.m in Sources */,
+				F83C653A1D69D4180074200A /* WeekView.m in Sources */,
 				F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */,
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
+				F83C65401D69D4440074200A /* FDateUtility.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
+				F83C65341D69D3C80074200A /* FCalendarView.m in Sources */,
+				F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */,
+				F83C65371D69D3EE0074200A /* FMonthView.m in Sources */,
 				F8118CA81D682A53001180DC /* main.m in Sources */,
+				F83C65461D69D77F0074200A /* MainViewController.m in Sources */,
+				F83C653D1D69D42A0074200A /* FDayView.m in Sources */,
 				F83C64E01D6863D90074200A /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
