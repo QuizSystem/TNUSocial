@@ -98,12 +98,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-pu-q2Y" customClass="FCalendarView">
-                                <rect key="frame" x="0.0" y="43" width="320" height="347"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-pu-q2Y" customClass="FCalendarView">
+                                <rect key="frame" x="0.0" y="3" width="320" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.95584028959274292" green="0.10144796222448349" blue="0.026108646765351295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Seg-pu-q2Y" firstAttribute="leading" secondItem="0KW-Gc-cGW" secondAttribute="leading" id="38d-Rr-Ksf"/>
+                            <constraint firstAttribute="trailing" secondItem="Seg-pu-q2Y" secondAttribute="trailing" id="3sO-b1-Diw"/>
+                            <constraint firstItem="gmE-nu-v0y" firstAttribute="top" secondItem="Seg-pu-q2Y" secondAttribute="bottom" id="n0m-Bm-N4Q"/>
+                            <constraint firstItem="Seg-pu-q2Y" firstAttribute="top" secondItem="0KW-Gc-cGW" secondAttribute="top" constant="3" id="naj-oM-IXy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="HcE-km-ZqW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
