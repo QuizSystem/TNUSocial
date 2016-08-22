@@ -14,6 +14,6 @@
 @property (strong, nonatomic) UICollectionView *collectionViewWeek;
 @property (strong, nonatomic) NSCalendar *calendar;
 @property (strong, nonatomic) NSMutableArray *arrWeekDayString;
--(void)setCurrentCalendar:(NSCalendar*)calendar;
+-(void)setCurrentCalendar:(NSCalendar *)calendar;
 
 @end
