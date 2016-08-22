@@ -22,7 +22,7 @@
 @implementation FMonthView
 
 #pragma mark - Init
-- (id)initWithCalendar:(NSCalendar*)calendar showDayOff:(BOOL)showDayOff dayViewHeight:(CGFloat)height {
+- (id)initWithCalendar:(NSCalendar *)calendar showDayOff:(BOOL)showDayOff dayViewHeight:(CGFloat)height {
     self = [super init];
     if (self) {
         //init code
@@ -88,7 +88,7 @@
                     relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0
                         constant:(SPACE_VALUE * 2)]];
             } else {
-                preDayView = [self.arrDayViews objectAtIndex:(i - 1)*7];
+                preDayView = [self.arrDayViews objectAtIndex:(i - 1) * 7];
                 [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeTop
                     relatedBy:NSLayoutRelationEqual toItem:preDayView attribute:NSLayoutAttributeBottom multiplier:1.0
                         constant:(SPACE_VALUE * 2)]];
@@ -146,7 +146,7 @@
     }
 }
 
-- (void)dayViewClick:(FDayView*)sender {
+- (void)dayViewClick:(FDayView *)sender {
     [sender.layer setBorderWidth:1];
     [self.dayViewSelected.layer setBorderWidth:0];
     self.dayViewSelected = sender;
@@ -158,13 +158,13 @@
     singleton.dateSelected = date;
     if (![date inSameMonthWithDate:self.month]) {
         if (sender.tag > 28) {
-            self.completionBlock(date,2);
+            self.completionBlock(date, 2);
         }
         if (sender.tag < 7) {
-            self.completionBlock(date,0);
+            self.completionBlock(date, 0);
         }
     } else {
-        self.completionBlock(date,-1);
+        self.completionBlock(date, -1);
     }
 }
 

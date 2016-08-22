@@ -17,9 +17,9 @@
 
 @protocol FCalendarDelegate <NSObject>
 @required
-- (void)didSelectDate:(NSDate*)date;
+- (void)didSelectDate:(NSDate *)date;
 @optional
-- (void)didScrollToMonth:(NSDate*)date;
+- (void)didScrollToMonth:(NSDate *)date;
 @end
 
 @interface FCalendarView : UIView <UIScrollViewDelegate>
