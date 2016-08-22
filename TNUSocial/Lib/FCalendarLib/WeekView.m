@@ -41,7 +41,7 @@
 - (void)initData {
     self.arrWeekDayString = [[NSMutableArray alloc] init];
     //Create collection view flow layout
-    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.sectionInset = UIEdgeInsetsMake(0, SPACE_VALUE, 0, SPACE_VALUE);
     //Create collectionview
     self.collectionViewWeek = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
