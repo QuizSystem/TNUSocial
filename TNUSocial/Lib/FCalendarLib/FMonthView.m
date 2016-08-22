@@ -69,7 +69,7 @@
             CGFloat scaleMultiplier = 1.0 / 7.0;
             [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeWidth
                 relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:scaleMultiplier
-                    constant:-(SPACE_VALUE *2)]];
+                    constant:-(SPACE_VALUE * 2)]];
             [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeHeight
                 relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:scaleMultiplier
                     constant:(self.dayViewHeight - (SPACE_VALUE * 2))]];
@@ -94,6 +94,7 @@
                         constant:(SPACE_VALUE * 2)]];
             }
             if ([date inSameMonthWithDate:self.month]) {
+                // ngay trong thang
                 [dayView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             } else {
                 [dayView setTitleColor:self.dayOffColor forState:UIControlStateNormal];
