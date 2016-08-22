@@ -11,7 +11,6 @@
 #import "FDateUtility.h"
 
 @interface ThangViewController () <FCalendarDelegate>
-
 @property (weak, nonatomic) IBOutlet FCalendarView *calView;
 @end
 
@@ -25,11 +24,6 @@
     [super viewDidAppear:animated];
     [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:YES dayViewHeight:-1];
     self.calView.delegate = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Calendar delegate

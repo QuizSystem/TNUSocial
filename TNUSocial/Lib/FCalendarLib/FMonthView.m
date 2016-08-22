@@ -67,19 +67,31 @@
             //DayView Layout
             [dayView setTranslatesAutoresizingMaskIntoConstraints:NO];
             CGFloat scaleMultiplier = 1.0 / 7.0;
-            [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:scaleMultiplier constant:-(SPACE_VALUE *2)]];
-            [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:scaleMultiplier constant:(self.dayViewHeight - (SPACE_VALUE * 2))]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeWidth
+                relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:scaleMultiplier
+                    constant:-(SPACE_VALUE *2)]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeHeight
+                relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:scaleMultiplier
+                    constant:(self.dayViewHeight - (SPACE_VALUE * 2))]];
             if (j == 0) {
-                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:(SPACE_VALUE * 2)]];
+                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeLeading
+                    relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0
+                        constant:(SPACE_VALUE * 2)]];
             } else {
                 preDayView = [self.arrDayViews objectAtIndex:tag - 1];
-                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:preDayView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:(SPACE_VALUE * 2)]];
+                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeLeading
+                    relatedBy:NSLayoutRelationEqual toItem:preDayView attribute:NSLayoutAttributeTrailing multiplier:1.0
+                        constant:(SPACE_VALUE * 2)]];
             }
             if (i == 0) {
-                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:(SPACE_VALUE * 2)]];
+                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeTop
+                    relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0
+                        constant:(SPACE_VALUE * 2)]];
             } else {
                 preDayView = [self.arrDayViews objectAtIndex:(i - 1)*7];
-                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:preDayView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:(SPACE_VALUE * 2)]];
+                [self addConstraint:[NSLayoutConstraint constraintWithItem:dayView attribute:NSLayoutAttributeTop
+                    relatedBy:NSLayoutRelationEqual toItem:preDayView attribute:NSLayoutAttributeBottom multiplier:1.0
+                        constant:(SPACE_VALUE * 2)]];
             }
             if ([date inSameMonthWithDate:self.month]) {
                 [dayView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -91,7 +103,8 @@
                 [dayView setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             }
             FCalendarSingleton *singleton = [FCalendarSingleton sharedInstance];
-            if ([date isEqualWithDate:singleton.dateSelected] && [self.month inSameMonthWithDate:singleton.dateSelected]) {
+            if ([date isEqualWithDate:singleton.dateSelected] &&
+                [self.month inSameMonthWithDate:singleton.dateSelected]) {
                 [dayView.layer setBorderWidth:1];
                 self.dayViewSelected = dayView;
             }
@@ -155,7 +168,7 @@
     }
 }
 
-- (void)didSelectDateWithCompletion:(void (^)(NSDate*, NSInteger))callBackBlock {
+- (void)didSelectDateWithCompletion:(void (^)(NSDate *, NSInteger))callBackBlock {
     self.completionBlock = callBackBlock;
 }
 

@@ -30,10 +30,11 @@
 }
 
 - (void)layoutSubviews {
-    NSLog(@"asdas");
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)self.collectionViewWeek.collectionViewLayout;
+    NSLog(@"layoutSubviews in weekview");
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionViewWeek.collectionViewLayout;
     if (flowLayout) {
-        flowLayout.itemSize = CGSizeMake(((self.bounds.size.width - (SPACE_VALUE *2)) / 7.0) - SPACE_VALUE * 2, self.bounds.size.height);
+        flowLayout.itemSize = CGSizeMake(((self.bounds.size.width - (SPACE_VALUE *2)) / 7.0) - SPACE_VALUE * 2,
+            self.bounds.size.height);
     }
 }
 
@@ -48,10 +49,16 @@
     [self addSubview:self.collectionViewWeek];
     //Contraint
     [self.collectionViewWeek setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeTop
+        relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek attribute:NSLayoutAttributeBottom
+        relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek
+        attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self
+            attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionViewWeek
+        attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self
+            attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0]];
     flowLayout.minimumInteritemSpacing = SPACE_VALUE;
     [self.collectionViewWeek registerClass:WeekCell.self forCellWithReuseIdentifier:@"WeekCell"];
     self.collectionViewWeek.dataSource = self;
@@ -82,8 +89,10 @@
     return 7;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    WeekCell *cell = (WeekCell*)[self.collectionViewWeek dequeueReusableCellWithReuseIdentifier:@"WeekCell" forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+    cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WeekCell *cell = (WeekCell *)[self.collectionViewWeek dequeueReusableCellWithReuseIdentifier:@"WeekCell"
+        forIndexPath:indexPath];
     //Add label
     cell.lbDayNumber.text = [self.arrWeekDayString objectAtIndex:indexPath.row];
     return cell;

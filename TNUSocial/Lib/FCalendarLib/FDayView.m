@@ -36,7 +36,8 @@
     [self setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [self.layer setBorderColor:[UIColor redColor].CGColor];
     //CreateSubView
-    self.subview = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height *2 / 3, self.bounds.size.width - 5, self.bounds.size.height / 3)];
+    self.subview = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height *2 / 3,
+        self.bounds.size.width - 5, self.bounds.size.height / 3)];
     [self.subview setBackgroundColor:[UIColor blueColor]];
     [self addSubview:self.subview];
     [self.subview setHidden:YES];

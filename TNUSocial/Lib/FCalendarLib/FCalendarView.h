@@ -16,7 +16,7 @@
 #define SPACE_VALUE 0.25
 
 @protocol FCalendarDelegate <NSObject>
-
+@required
 - (void)didSelectDate:(NSDate*)date;
 @optional
 - (void)didScrollToMonth:(NSDate*)date;
@@ -30,7 +30,9 @@
 @property (strong, nonatomic) NSDate *dateSelected;
 @property (assign, nonatomic) BOOL showDayOff;
 @property (weak, nonatomic) id<FCalendarDelegate> delegate;
-- (void)setDataWithCalendar:(NSCalendar*)calendar monthDisplay:(NSDate*)month dateSelected:(NSDate*)date showDayOff:(BOOL)showDayOff dayViewHeight:(CGFloat)height;
+
+- (void)setDataWithCalendar:(NSCalendar *)calendar monthDisplay:(NSDate *)month dateSelected:(NSDate *)date
+    showDayOff:(BOOL)showDayOff dayViewHeight:(CGFloat)height;
 - (void)moveToNextMonth;
 - (void)moveToPreviousMonth;
 
