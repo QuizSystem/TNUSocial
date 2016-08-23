@@ -67,16 +67,17 @@
 
 -(void)setCurrentCalendar:(NSCalendar*)calendar {
     self.calendar = calendar;
-    [self.arrWeekDayString removeAllObjects];
+//    [self.arrWeekDayString removeAllObjects];
     //day start in current calendar
-    NSDate *beginDateInCurrentCalendar =  [NSDate dateBeginningOfMonth:[NSDate date] inCalendar:self.calendar];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"EE"];
-    for (int i = 0; i < 7; i++) {
-        NSDate *date = [beginDateInCurrentCalendar dateByAddingTimeInterval:(86400 * i)];
-        [self.arrWeekDayString addObject:[formatter stringFromDate:date]];
-    }
+//    NSDate *beginDateInCurrentCalendar =  [NSDate dateBeginningOfMonth:[NSDate date] inCalendar:self.calendar];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setLocale:[NSLocale currentLocale]];
+//    [formatter setDateFormat:@"EE"];
+//    for (int i = 0; i < 7; i++) {
+//        NSDate *date = [beginDateInCurrentCalendar dateByAddingTimeInterval:(86400 * i)];
+//        [self.arrWeekDayString addObject:[formatter stringFromDate:date]];
+//    }
+    self.arrWeekDayString = @[@"CN", @"T2", @"T3", @"T4", @"T5", @"T6", @"T7"];
     [self.collectionViewWeek reloadData];
 }
 
