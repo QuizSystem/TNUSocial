@@ -16,10 +16,10 @@
 @property (strong, nonatomic) FMonthView *monthViewPreViousMonth;
 @property (strong, nonatomic) UIButton *btnPreviousMonth;
 @property (strong, nonatomic) UIButton *btnNextMonth;
-@property (strong, nonatomic) WeekView *weekView;
-@property (strong, nonatomic) UIView *infoView;
+@property (strong, nonatomic) WeekView *weekView; // ngay trong tuan
+@property (strong, nonatomic) UIView *infoView; // view chua
 @property (strong, nonatomic) UIView *containerView;
-@property (strong, nonatomic) UILabel *lbInfor;
+@property (strong, nonatomic) UILabel *lbInfor; // thang
 @property (strong, nonatomic) NSDateFormatter *formatter;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipeLeft;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipeRight;
@@ -233,12 +233,12 @@
                 frame.origin.x = -(frame.size.width);
                 break;
             case 1:
-                monthView.month = self.monthDisplay;
-                frame.origin.x = 0;
-                break;
-            case 2:
                 monthView.month = [self.monthDisplay nextMonth];
                 frame.origin.x = frame.size.width;
+                break;
+            case 2:
+                monthView.month = self.monthDisplay;
+                frame.origin.x = 0;
                 break;
             default:
                 break;
@@ -276,7 +276,7 @@
         }];
     }
     [self setMonthViewPositionWithTranslate:CGPointMake(0, 0)];
-    self.monthView = ((FMonthView*)[self.monthViews objectAtIndex:1]);
+    self.monthView = ((FMonthView *)[self.monthViews objectAtIndex:1]);
 }
 
 #pragma mark - Swipe handler
