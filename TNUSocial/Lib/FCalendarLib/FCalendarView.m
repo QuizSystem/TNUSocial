@@ -262,7 +262,19 @@
         monthView.frame = frame;
         [self.containerView layoutSubviews];
         [monthView createView];
-        [self.monthViews addObject:monthView];
+        switch (i) {
+            case 0:
+                self.monthViewPreViousMonth = monthView;
+                break;
+            case 1:
+                self.monthViewNextMonth = monthView;
+                break;
+            case 2:
+                self.monthView = monthView;
+                break;
+            default:
+                break;
+        }
         [monthView didSelectDateWithCompletion:^(NSDate *dateSelected, NSInteger swapView) {
             [self reloadMonthView];
             if (swapView == 0) {
@@ -276,6 +288,9 @@
             }
         }];
     }
+    [self.monthViews addObject:self.monthViewPreViousMonth];
+    [self.monthViews addObject:self.monthView];
+    [self.monthViews addObject:self.monthViewNextMonth];
     [self setMonthViewPositionWithTranslate:CGPointMake(0, 0)];
     self.monthView = ((FMonthView *)[self.monthViews objectAtIndex:1]);
 }
