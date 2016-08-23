@@ -73,7 +73,8 @@
     [self setBackgroundColor:[UIColor whiteColor]];
     if (!self.calendar) {
         self.calendar = [NSCalendar currentCalendar];
-        self.calendar.firstWeekday = 2;
+        // chọn ngày bắt đầu: =8 có nghĩa là  CN T2 T3 ... T7
+        self.calendar.firstWeekday = 8;
     }
     if (!self.monthDisplay) {
         self.monthDisplay = [NSDate date];

@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) UICollectionView *collectionViewWeek;
 @property (strong, nonatomic) NSCalendar *calendar;
-@property (strong, nonatomic) NSMutableArray *arrWeekDayString;
+@property (strong, nonatomic) NSArray *arrWeekDayString;
 -(void)setCurrentCalendar:(NSCalendar *)calendar;
 
 @end
