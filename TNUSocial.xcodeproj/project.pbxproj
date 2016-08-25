@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C70F71D6F202800BAD186 /* UIColor+HexString.m */; };
 		5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */; };
 		F8118CA81D682A53001180DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CA71D682A53001180DC /* main.m */; };
 		F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CAA1D682A53001180DC /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.release.xcconfig"; sourceTree = "<group>"; };
+		517C70F61D6F202700BAD186 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "Lib/FCalendarLib/UIColor+HexString.h"; sourceTree = "<group>"; };
+		517C70F71D6F202800BAD186 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "Lib/FCalendarLib/UIColor+HexString.m"; sourceTree = "<group>"; };
 		766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNUSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8118CA31D682A53001180DC /* TNUSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNUSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				F83C653F1D69D4440074200A /* FDateUtility.m */,
 				F83C65411D69D45B0074200A /* FCalendarSingleton.h */,
 				F83C65421D69D45B0074200A /* FCalendarSingleton.m */,
+				517C70F61D6F202700BAD186 /* UIColor+HexString.h */,
+				517C70F71D6F202800BAD186 /* UIColor+HexString.m */,
 			);
 			name = FCalendarLib;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				F83C652B1D69D2E70074200A /* WeekCell.m in Sources */,
 				F83C653A1D69D4180074200A /* WeekView.m in Sources */,
 				F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */,
+				517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */,
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
 				F83C65401D69D4440074200A /* FDateUtility.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,

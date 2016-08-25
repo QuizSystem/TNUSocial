@@ -27,8 +27,8 @@
             relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0
                 constant:0.0]];
         
-        [self.lbDayNumber setTextColor:[UIColor whiteColor]];
-        [self.lbDayNumber setBackgroundColor:[UIColor blueColor]];
+        [self.lbDayNumber setTextColor:[UIColor blackColor]];
+        [self.lbDayNumber setBackgroundColor:[UIColor whiteColor]];
         [self.lbDayNumber setTextAlignment:NSTextAlignmentCenter];
     }
     return self;

@@ -9,6 +9,7 @@
 #import "FCalendarView.h"
 #import "FDateUtility.h"
 #import "WeekView.h"
+#import "UIColor+HexString.h"
 
 @interface FCalendarView ()
 @property (strong, nonatomic) FMonthView *monthView;
@@ -88,6 +89,7 @@
     [self.formatter setDateFormat:@"MMMM yyyy"];
     self.lbInfor = [[UILabel alloc] init];
     [self.lbInfor setTextAlignment:NSTextAlignmentCenter];
+    self.lbInfor.textColor = [UIColor whiteColor];
     [self createUIWithFrame:self.bounds];
 }
 
@@ -95,7 +97,8 @@
     //Create Month Label
     self.infoView = [[UIView alloc] init];
     [self.infoView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.infoView setBackgroundColor:[UIColor yellowColor]];
+    UIColor *color = [UIColor colorWithHexString:@"#0079F9"];
+    [self.infoView setBackgroundColor:color];
     [self addSubview:self.infoView];
     //Constraint InfoView
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.infoView attribute:NSLayoutAttributeWidth
@@ -125,13 +128,13 @@
     //Button next month
     self.btnPreviousMonth = [[UIButton alloc] init];
     [self.btnPreviousMonth setTitle:@"<" forState:UIControlStateNormal];
-    [self.btnPreviousMonth setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnPreviousMonth setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnPreviousMonth addTarget:self action:@selector(moveToPreviousMonth)
         forControlEvents:UIControlEventTouchUpInside];
     //Button previous month
     self.btnNextMonth = [[UIButton alloc] init];
     [self.btnNextMonth setTitle:@">" forState:UIControlStateNormal];
-    [self.btnNextMonth setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.btnNextMonth setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnNextMonth addTarget:self action:@selector(moveToNextMonth) forControlEvents:UIControlEventTouchUpInside];
     //Add 2 buttons
     [self.infoView addSubview:self.btnNextMonth];
