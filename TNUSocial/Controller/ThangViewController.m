@@ -12,6 +12,7 @@
 
 @interface ThangViewController () <FCalendarDelegate>
 @property (weak, nonatomic) IBOutlet FCalendarView *calView;
+- (IBAction)btToday:(id)sender;
 @end
 
 @implementation ThangViewController
@@ -31,6 +32,10 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     NSLog(@"Date Selected : %@",[formatter stringFromDate:date]);
+}
+
+- (IBAction)btToday:(id)sender {
+    NSLog(@"Today: %@", [NSDate date] );
 }
 
 @end
