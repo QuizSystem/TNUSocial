@@ -108,15 +108,18 @@
                                 <state key="normal" title="01" backgroundImage="today.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btToday:" destination="Dz6-sc-eza" eventType="touchUpInside" id="luK-KH-79d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Seg-pu-q2Y" firstAttribute="leading" secondItem="0KW-Gc-cGW" secondAttribute="leading" id="38d-Rr-Ksf"/>
                             <constraint firstAttribute="trailing" secondItem="Seg-pu-q2Y" secondAttribute="trailing" id="3sO-b1-Diw"/>
-                            <constraint firstAttribute="trailing" secondItem="QAv-0h-h1W" secondAttribute="trailing" constant="30" id="FB6-14-TnB"/>
-                            <constraint firstItem="gmE-nu-v0y" firstAttribute="top" secondItem="QAv-0h-h1W" secondAttribute="bottom" constant="30" id="Q1F-99-X9n"/>
+                            <constraint firstAttribute="trailing" secondItem="QAv-0h-h1W" secondAttribute="trailing" constant="30" id="A2C-7c-kOa"/>
                             <constraint firstItem="gmE-nu-v0y" firstAttribute="top" secondItem="Seg-pu-q2Y" secondAttribute="bottom" id="n0m-Bm-N4Q"/>
                             <constraint firstItem="Seg-pu-q2Y" firstAttribute="top" secondItem="0KW-Gc-cGW" secondAttribute="top" constant="3" id="naj-oM-IXy"/>
+                            <constraint firstItem="gmE-nu-v0y" firstAttribute="top" secondItem="QAv-0h-h1W" secondAttribute="bottom" constant="30" id="y76-UZ-PgE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="HcE-km-ZqW"/>
