@@ -12,6 +12,7 @@
 
 @interface ThangViewController () <FCalendarDelegate>
 @property (weak, nonatomic) IBOutlet FCalendarView *calView;
+@property (weak, nonatomic) IBOutlet UIButton *btToday;
 - (IBAction)btToday:(id)sender;
 @end
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setValueButtonToday];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -34,6 +36,15 @@
     NSLog(@"Date Selected : %@",[formatter stringFromDate:date]);
 }
 
+#pragma mark - set value for button Today
+- (void)setValueButtonToday {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd"];
+    NSString *today = [formatter stringFromDate:[NSDate date]];
+    [self.btToday setTitle:today forState:UIControlStateNormal];
+}
+
+#pragma mark - Event click button Today
 - (IBAction)btToday:(id)sender {
     [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
 }

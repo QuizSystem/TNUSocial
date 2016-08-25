@@ -125,6 +125,7 @@
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="HcE-km-ZqW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="btToday" destination="QAv-0h-h1W" id="Rux-mW-pV8"/>
                         <outlet property="calView" destination="Seg-pu-q2Y" id="Q3X-cP-LTd"/>
                     </connections>
                 </viewController>
