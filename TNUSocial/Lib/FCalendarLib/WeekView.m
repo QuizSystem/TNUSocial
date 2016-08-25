@@ -45,7 +45,7 @@
     flowLayout.sectionInset = UIEdgeInsetsMake(0, SPACE_VALUE, 0, SPACE_VALUE);
     //Create collectionview
     self.collectionViewWeek = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
-    [self.collectionViewWeek setBackgroundColor:[UIColor greenColor]];
+    [self.collectionViewWeek setBackgroundColor:[UIColor grayColor]];
     [self addSubview:self.collectionViewWeek];
     //Contraint
     [self.collectionViewWeek setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -96,6 +96,7 @@
         forIndexPath:indexPath];
     //Add label
     cell.lbDayNumber.text = [self.arrWeekDayString objectAtIndex:indexPath.row];
+    cell.lbDayNumber.textColor = [UIColor grayColor];
     return cell;
 }
 
