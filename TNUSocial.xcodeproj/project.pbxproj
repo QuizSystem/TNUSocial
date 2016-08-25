@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C70F71D6F202800BAD186 /* UIColor+HexString.m */; };
+		517C71061D6F338D00BAD186 /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C71051D6F338D00BAD186 /* today.png */; };
 		5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */; };
 		F8118CA81D682A53001180DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CA71D682A53001180DC /* main.m */; };
 		F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CAA1D682A53001180DC /* AppDelegate.m */; };
@@ -31,6 +32,7 @@
 		0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.release.xcconfig"; sourceTree = "<group>"; };
 		517C70F61D6F202700BAD186 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "Lib/FCalendarLib/UIColor+HexString.h"; sourceTree = "<group>"; };
 		517C70F71D6F202800BAD186 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "Lib/FCalendarLib/UIColor+HexString.m"; sourceTree = "<group>"; };
+		517C71051D6F338D00BAD186 /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = today.png; path = Resources/Images/today.png; sourceTree = "<group>"; };
 		766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNUSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8118CA31D682A53001180DC /* TNUSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNUSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		517C70F91D6F318900BAD186 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				517C70FA1D6F319200BAD186 /* Image */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		517C70FA1D6F319200BAD186 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				517C71051D6F338D00BAD186 /* today.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		96BD92A6C1992BD00C8EF1D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +133,7 @@
 		F8118CA51D682A53001180DC /* TNUSocial */ = {
 			isa = PBXGroup;
 			children = (
+				517C70F91D6F318900BAD186 /* Resources */,
 				F83C65261D69D2850074200A /* Lib */,
 				F8C2BF6E1D682D5800F3533C /* Controller */,
 				F8118CBD1D682C1A001180DC /* UI */,
@@ -259,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */,
+				517C71061D6F338D00BAD186 /* today.png in Resources */,
 				F8118CB31D682A53001180DC /* Assets.xcassets in Resources */,
 				F8118CBF1D682C49001180DC /* Main.storyboard in Resources */,
 			);
