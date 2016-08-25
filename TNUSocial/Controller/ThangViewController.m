@@ -35,7 +35,7 @@
 }
 
 - (IBAction)btToday:(id)sender {
-    NSLog(@"Today: %@", [NSDate date] );
+    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
 }
 
 @end
