@@ -34,6 +34,10 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     NSLog(@"Date Selected : %@",[formatter stringFromDate:date]);
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Day" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RootDayViewController"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - set value for button Today
