@@ -9,6 +9,7 @@
 #import "ThangViewController.h"
 #import "FCalendarView.h"
 #import "FDateUtility.h"
+#import "RootDayViewController.h"
 
 @interface ThangViewController () <FCalendarDelegate>
 @property (weak, nonatomic) IBOutlet FCalendarView *calView;
@@ -36,7 +37,8 @@
     NSLog(@"Date Selected : %@",[formatter stringFromDate:date]);
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Day" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RootDayViewController"];
+    RootDayViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RootDayViewController"];
+    vc.dateSelected = date;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

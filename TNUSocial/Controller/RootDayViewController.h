@@ -10,6 +10,7 @@
 
 @interface RootDayViewController : UIViewController <UIPageViewControllerDelegate>
 
-@property(nonatomic,strong) UIPageViewController *pageController;
+@property (nonatomic, strong) UIPageViewController *pageController;
+@property (nonatomic, strong) NSDate *dateSelected;
 
 @end

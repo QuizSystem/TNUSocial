@@ -17,7 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld",(long)self.index];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSLog(@">>>Date Selected : %@",[formatter stringFromDate:self.dateSelected]);
+    NSString *thu = [formatter stringFromDate:self.dateSelected];
+    self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld. Date = %@",(long)self.index, thu];
 }
 
 - (void)didReceiveMemoryWarning {

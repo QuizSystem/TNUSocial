@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailDayViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *Screenindex;
-@property(assign,nonatomic) NSInteger index;
+@property (nonatomic, weak) IBOutlet UILabel *Screenindex;
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) NSDate *dateSelected;
 @end
