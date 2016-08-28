@@ -26,6 +26,10 @@
 		F83C653D1D69D42A0074200A /* FDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653C1D69D42A0074200A /* FDayView.m */; };
 		F83C65401D69D4440074200A /* FDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653F1D69D4440074200A /* FDateUtility.m */; };
 		F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65421D69D45B0074200A /* FCalendarSingleton.m */; };
+		F8A669991D732B1A0032652D /* DetailDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A669971D732B1A0032652D /* DetailDayViewController.m */; };
+		F8A6699A1D732B1A0032652D /* DetailDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A669981D732B1A0032652D /* DetailDayViewController.xib */; };
+		F8E244A91D71C2C800EF3B58 /* Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E244A81D71C2C800EF3B58 /* Day.storyboard */; };
+		F8E244AC1D71C2EF00EF3B58 /* RootDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E244AB1D71C2EF00EF3B58 /* RootDayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,12 @@
 		F83C653F1D69D4440074200A /* FDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDateUtility.m; path = Lib/FCalendarLib/FDateUtility.m; sourceTree = "<group>"; };
 		F83C65411D69D45B0074200A /* FCalendarSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCalendarSingleton.h; path = Lib/FCalendarLib/FCalendarSingleton.h; sourceTree = "<group>"; };
 		F83C65421D69D45B0074200A /* FCalendarSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCalendarSingleton.m; path = Lib/FCalendarLib/FCalendarSingleton.m; sourceTree = "<group>"; };
+		F8A669961D732B1A0032652D /* DetailDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailDayViewController.h; path = Controller/DetailDay/DetailDayViewController.h; sourceTree = "<group>"; };
+		F8A669971D732B1A0032652D /* DetailDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailDayViewController.m; path = Controller/DetailDay/DetailDayViewController.m; sourceTree = "<group>"; };
+		F8A669981D732B1A0032652D /* DetailDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailDayViewController.xib; path = Controller/DetailDay/DetailDayViewController.xib; sourceTree = "<group>"; };
+		F8E244A81D71C2C800EF3B58 /* Day.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Day.storyboard; path = UI/Day.storyboard; sourceTree = "<group>"; };
+		F8E244AA1D71C2EF00EF3B58 /* RootDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootDayViewController.h; path = Controller/RootDayViewController.h; sourceTree = "<group>"; };
+		F8E244AB1D71C2EF00EF3B58 /* RootDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootDayViewController.m; path = Controller/RootDayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 		F8118CA51D682A53001180DC /* TNUSocial */ = {
 			isa = PBXGroup;
 			children = (
+				F8E244B01D71C37000EF3B58 /* Model */,
 				517C70F91D6F318900BAD186 /* Resources */,
 				F83C65261D69D2850074200A /* Lib */,
 				F8C2BF6E1D682D5800F3533C /* Controller */,
@@ -159,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				F8118CBE1D682C49001180DC /* Main.storyboard */,
+				F8E244A81D71C2C800EF3B58 /* Day.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -202,9 +214,20 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		F8A669951D732B010032652D /* DetailDay */ = {
+			isa = PBXGroup;
+			children = (
+				F8A669961D732B1A0032652D /* DetailDayViewController.h */,
+				F8A669971D732B1A0032652D /* DetailDayViewController.m */,
+				F8A669981D732B1A0032652D /* DetailDayViewController.xib */,
+			);
+			name = DetailDay;
+			sourceTree = "<group>";
+		};
 		F8C2BF6E1D682D5800F3533C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F8A669951D732B010032652D /* DetailDay */,
 				F83C64DE1D6863D90074200A /* MenuViewController.h */,
 				F83C64DF1D6863D90074200A /* MenuViewController.m */,
 				F83C64EF1D68D9B60074200A /* ThangViewController.h */,
@@ -213,8 +236,17 @@
 				F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */,
 				F83C64F51D68D9E40074200A /* GhiChuViewController.h */,
 				F83C64F61D68D9E40074200A /* GhiChuViewController.m */,
+				F8E244AA1D71C2EF00EF3B58 /* RootDayViewController.h */,
+				F8E244AB1D71C2EF00EF3B58 /* RootDayViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F8E244B01D71C37000EF3B58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +311,8 @@
 			files = (
 				F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */,
 				517C71061D6F338D00BAD186 /* today.png in Resources */,
+				F8A6699A1D732B1A0032652D /* DetailDayViewController.xib in Resources */,
+				F8E244A91D71C2C800EF3B58 /* Day.storyboard in Resources */,
 				F8118CB31D682A53001180DC /* Assets.xcassets in Resources */,
 				F8118CBF1D682C49001180DC /* Main.storyboard in Resources */,
 			);
@@ -343,11 +377,13 @@
 				F83C652B1D69D2E70074200A /* WeekCell.m in Sources */,
 				F83C653A1D69D4180074200A /* WeekView.m in Sources */,
 				F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */,
+				F8A669991D732B1A0032652D /* DetailDayViewController.m in Sources */,
 				517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */,
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
 				F83C65401D69D4440074200A /* FDateUtility.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
 				F83C65341D69D3C80074200A /* FCalendarView.m in Sources */,
+				F8E244AC1D71C2EF00EF3B58 /* RootDayViewController.m in Sources */,
 				F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */,
 				F83C65371D69D3EE0074200A /* FMonthView.m in Sources */,
 				F8118CA81D682A53001180DC /* main.m in Sources */,
