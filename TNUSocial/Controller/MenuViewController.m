@@ -9,14 +9,17 @@
 #import "MenuViewController.h"
 
 @interface MenuViewController ()
-
+- (IBAction)btLogin:(id)sender;
 @end
 
 @implementation MenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Menu");
+}
+
+- (IBAction)btLogin:(id)sender {
+    NSLog(@"Login");
 }
 
 @end
