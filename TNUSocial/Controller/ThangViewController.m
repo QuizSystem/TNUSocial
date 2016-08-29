@@ -22,12 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setValueButtonToday];
+    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
+    self.calView.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
-    self.calView.delegate = self;
 }
 
 #pragma mark - Calendar delegate

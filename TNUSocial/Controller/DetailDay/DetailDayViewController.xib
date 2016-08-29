@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailDayViewController">
             <connections>
                 <outlet property="Screenindex" destination="5Ih-H8-lQm" id="Lo7-xX-3WZ"/>
+                <outlet property="btToday" destination="ovF-te-Zy8" id="vQ3-eB-nc2"/>
                 <outlet property="dayOfMonth" destination="S2M-lF-eGa" id="Yt8-AU-UQL"/>
                 <outlet property="dayOfWeek" destination="u7g-Nd-CiI" id="Gz8-cf-F5e"/>
                 <outlet property="monthYear" destination="CXA-Bb-dqL" id="hwG-vk-IGQ"/>
@@ -19,53 +20,70 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ih-H8-lQm">
-                    <rect key="frame" x="33" y="389" width="528" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THỨ NĂM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-Nd-CiI">
+                    <rect key="frame" x="261" y="87" width="79" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THỨ NĂM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-Nd-CiI">
-                    <rect key="frame" x="253" y="73" width="94" height="38"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-lF-eGa">
-                    <rect key="frame" x="268" y="139" width="65" height="54"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-lF-eGa">
+                    <rect key="frame" x="284" y="171" width="33" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="29"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 / 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXA-Bb-dqL">
-                    <rect key="frame" x="213" y="233" width="175" height="32"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 / 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXA-Bb-dqL">
+                    <rect key="frame" x="265" y="276" width="71" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvT-3h-OFh">
-                    <rect key="frame" x="33" y="33" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvT-3h-OFh">
+                    <rect key="frame" x="35" y="35" width="34" height="30"/>
                     <state key="normal" title="Back"/>
                     <connections>
                         <action selector="btBack:" destination="-1" eventType="touchUpInside" id="4mA-aP-ewe"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AQ-IF-ND8">
-                    <rect key="frame" x="24" y="544" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AQ-IF-ND8">
+                    <rect key="frame" x="35" y="535" width="30" height="30"/>
                     <state key="normal" title="Add"/>
                     <connections>
                         <action selector="btAdd:" destination="-1" eventType="touchUpInside" id="eSP-nx-uSc"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovF-te-Zy8">
-                    <rect key="frame" x="363" y="544" width="46" height="30"/>
-                    <state key="normal" title="Today"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovF-te-Zy8">
+                    <rect key="frame" x="530" y="530" width="35" height="35"/>
+                    <state key="normal" title="01" backgroundImage="today.png"/>
                     <connections>
                         <action selector="btToday:" destination="-1" eventType="touchUpInside" id="IYu-HO-jzo"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ih-H8-lQm">
+                    <rect key="frame" x="28" y="407" width="528" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.48766148160449108" green="1" blue="0.45283527290880365" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="CXA-Bb-dqL" firstAttribute="top" secondItem="S2M-lF-eGa" secondAttribute="bottom" constant="70" id="G1h-4b-yz0"/>
+                <constraint firstItem="KvT-3h-OFh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Kax-ko-hOW"/>
+                <constraint firstItem="u7g-Nd-CiI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="87" id="RVr-dW-mRn"/>
+                <constraint firstItem="u7g-Nd-CiI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SRY-kA-Ybp"/>
+                <constraint firstAttribute="bottom" secondItem="8AQ-IF-ND8" secondAttribute="bottom" constant="35" id="VL1-4A-6k8"/>
+                <constraint firstAttribute="bottom" secondItem="ovF-te-Zy8" secondAttribute="bottom" constant="35" id="anw-iv-GBx"/>
+                <constraint firstItem="CXA-Bb-dqL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="blM-0h-Qok"/>
+                <constraint firstItem="S2M-lF-eGa" firstAttribute="top" secondItem="u7g-Nd-CiI" secondAttribute="bottom" constant="63" id="sab-ey-RQj"/>
+                <constraint firstItem="KvT-3h-OFh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="tlN-CJ-aay"/>
+                <constraint firstAttribute="trailing" secondItem="ovF-te-Zy8" secondAttribute="trailing" constant="35" id="vTh-HV-Rji"/>
+                <constraint firstItem="8AQ-IF-ND8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="wQ8-TQ-WO6"/>
+                <constraint firstItem="S2M-lF-eGa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wWJ-oD-0g2"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="today.png" width="35" height="35"/>
+    </resources>
 </document>
