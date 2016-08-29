@@ -14,9 +14,9 @@
 
 - (void)loginWithFrom:(NSString *)from appId:(NSString *)appId appSecret:(NSString *)appSecret
     username:(NSString *)username password:(NSString *)password {
-    NSString *urlLogin = URL_LOGIN;
-    NSString *paramLogin = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
-        FROM, from, APP_ID, appId, APP_SECRET, appSecret, USERNAME, username, PASSWORD, password];
+    NSString *urlLogin = DOMAIN_VALLUE;
+    NSString *paramLogin = [NSString stringWithFormat:@"%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
+        URL_LOGIN, FROM, from, APP_ID, appId, APP_SECRET, appSecret, USERNAME, username, PASSWORD, password];
     [NetworkConnection responseWithUrl:urlLogin method:POST params:paramLogin
         resultRequest:^(NSDictionary *dic, NSError *error) {
             if (!error && dic) {
