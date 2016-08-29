@@ -283,6 +283,7 @@
 				TargetAttributes = {
 					F8118CA21D682A53001180DC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Z4ZNZ62PTW;
 					};
 				};
 			};
@@ -493,10 +494,13 @@
 			baseConfigurationReference = 766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = TNUSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.otvina.TNUSocial;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvina.TNUSocialdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1e7de566-092e-4d02-bd6f-e291f87c1e86";
 			};
 			name = Debug;
 		};
@@ -505,10 +509,13 @@
 			baseConfigurationReference = 0FDFE08B06D994760EFA09F0 /* Pods-TNUSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = TNUSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.otvina.TNUSocial;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvina.TNUSocialdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1e7de566-092e-4d02-bd6f-e291f87c1e86";
 			};
 			name = Release;
 		};
