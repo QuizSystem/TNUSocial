@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dayOfWeek;
 @property (weak, nonatomic) IBOutlet UILabel *dayOfMonth;
 @property (weak, nonatomic) IBOutlet UILabel *monthYear;
+@property (weak, nonatomic) IBOutlet UIButton *btToday;
 @end
 
 @implementation DetailDayViewController
@@ -22,11 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd/MM/yyyy"];
-    NSLog(@">>>Date Selected : %@",[formatter stringFromDate:self.dateSelected]);
-    NSString *thu = [formatter stringFromDate:self.dateSelected];
-    self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld. Date = %@",(long)self.index, thu];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"dd/MM/yyyy"];
+//    NSLog(@">>>Date Selected : %@",[formatter stringFromDate:self.dateSelected]);
+//    NSString *thu = [formatter stringFromDate:self.dateSelected];
+//    self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld. Date = %@",(long)self.index, thu];
     
     [self setText];
 }
@@ -36,6 +37,7 @@
     [self setTextDayOfWeek];
     [self setTextDayOfMonth];
     [self setTextMonthYear];
+    [self setTextButtonToday];
 }
 
 - (void)setTextDayOfWeek {
@@ -43,7 +45,11 @@
     NSDateComponents *weekdayComponents = [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit)
         fromDate:self.dateSelected];
     NSInteger weekday = [weekdayComponents weekday];
-    self.dayOfWeek.text = [NSString stringWithFormat:@"Thứ %d", weekday];
+    if (weekday >= 2 && weekday <= 7) {
+        self.dayOfWeek.text = [NSString stringWithFormat:@"Thứ %d", weekday];
+    } else {
+        self.dayOfWeek.text = @"Chủ Nhật";
+    }
 }
 
 - (void)setTextDayOfMonth {
@@ -58,6 +64,13 @@
     self.monthYear.text = [formatter stringFromDate:self.dateSelected];
 }
 
+- (void)setTextButtonToday {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd"];
+    NSString *today = [formatter stringFromDate:[NSDate date]];
+    [self.btToday setTitle:today forState:UIControlStateNormal];
+}
+
 - (IBAction)btBack:(id)sender {
     NSLog(@"Back");
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -69,5 +82,15 @@
 
 - (IBAction)btToday:(id)sender {
     NSLog(@"Today");
+    NSDate *date1 = [NSDate date];
+    NSDate *date2 = self.dateSelected;
+    NSTimeInterval secondsBetween = [date2 timeIntervalSinceDate:date1];
+    NSUInteger numberOfDays = secondsBetween / 86400;
+//    NSLog(@"There are %d days in between the two dates.", numberOfDays);
+//    self.index = self.index + numberOfDays;
+//    self.dateSelected = date1;
+//    [self setText];
+
 }
+
 @end
