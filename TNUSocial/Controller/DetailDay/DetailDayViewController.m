@@ -9,7 +9,12 @@
 #import "DetailDayViewController.h"
 
 @interface DetailDayViewController ()
-
+- (IBAction)btBack:(id)sender;
+- (IBAction)btAdd:(id)sender;
+- (IBAction)btToday:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *dayOfWeek;
+@property (weak, nonatomic) IBOutlet UILabel *dayOfMonth;
+@property (weak, nonatomic) IBOutlet UILabel *monthYear;
 @end
 
 @implementation DetailDayViewController
@@ -22,21 +27,47 @@
     NSLog(@">>>Date Selected : %@",[formatter stringFromDate:self.dateSelected]);
     NSString *thu = [formatter stringFromDate:self.dateSelected];
     self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld. Date = %@",(long)self.index, thu];
+    
+    [self setText];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Set Text
+- (void)setText {
+    [self setTextDayOfWeek];
+    [self setTextDayOfMonth];
+    [self setTextMonthYear];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setTextDayOfWeek {
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *weekdayComponents = [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit)
+        fromDate:self.dateSelected];
+    NSInteger weekday = [weekdayComponents weekday];
+    self.dayOfWeek.text = [NSString stringWithFormat:@"Thứ %d", weekday];
 }
-*/
 
+- (void)setTextDayOfMonth {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd"];
+    self.dayOfMonth.text = [formatter stringFromDate:self.dateSelected];
+}
+
+- (void)setTextMonthYear {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/yyyy"];
+    self.monthYear.text = [formatter stringFromDate:self.dateSelected];
+}
+
+- (IBAction)btBack:(id)sender {
+    NSLog(@"Back");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)btAdd:(id)sender {
+    NSLog(@"Add");
+}
+
+- (IBAction)btToday:(id)sender {
+    NSLog(@"Today");
+}
 @end
