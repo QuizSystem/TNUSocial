@@ -11,6 +11,7 @@
 		517C71061D6F338D00BAD186 /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C71051D6F338D00BAD186 /* today.png */; };
 		51DADE8F1D7498240021C932 /* NetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE8E1D7498240021C932 /* NetworkConnection.m */; };
 		51DADE931D749A9A0021C932 /* MyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE921D749A9A0021C932 /* MyConst.m */; };
+		51DADE971D74A2050021C932 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE961D74A2050021C932 /* LoginManager.m */; };
 		5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */; };
 		F8118CA81D682A53001180DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CA71D682A53001180DC /* main.m */; };
 		F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8118CAA1D682A53001180DC /* AppDelegate.m */; };
@@ -43,6 +44,8 @@
 		51DADE8E1D7498240021C932 /* NetworkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkConnection.m; path = Network/NetworkConnection.m; sourceTree = "<group>"; };
 		51DADE911D749A9A0021C932 /* MyConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyConst.h; path = Utils/MyConst.h; sourceTree = "<group>"; };
 		51DADE921D749A9A0021C932 /* MyConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyConst.m; path = Utils/MyConst.m; sourceTree = "<group>"; };
+		51DADE951D74A2050021C932 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginManager.h; path = Manager/LoginManager.h; sourceTree = "<group>"; };
+		51DADE961D74A2050021C932 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = Manager/LoginManager.m; sourceTree = "<group>"; };
 		766653B245B5EC718712F346 /* Pods-TNUSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNUSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNUSocial/Pods-TNUSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNUSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8118CA31D682A53001180DC /* TNUSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNUSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +141,15 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		51DADE941D74A1EB0021C932 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				51DADE951D74A2050021C932 /* LoginManager.h */,
+				51DADE961D74A2050021C932 /* LoginManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		96BD92A6C1992BD00C8EF1D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		F8118CA51D682A53001180DC /* TNUSocial */ = {
 			isa = PBXGroup;
 			children = (
+				51DADE941D74A1EB0021C932 /* Manager */,
 				51DADE901D749A810021C932 /* Utils */,
 				51DADE8C1D7497F70021C932 /* Network */,
 				F8E244B01D71C37000EF3B58 /* Model */,
@@ -411,6 +424,7 @@
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
 				51DADE931D749A9A0021C932 /* MyConst.m in Sources */,
 				F83C65341D69D3C80074200A /* FCalendarView.m in Sources */,
+				51DADE971D74A2050021C932 /* LoginManager.m in Sources */,
 				F8E244AC1D71C2EF00EF3B58 /* RootDayViewController.m in Sources */,
 				F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */,
 				F83C65371D69D3EE0074200A /* FMonthView.m in Sources */,

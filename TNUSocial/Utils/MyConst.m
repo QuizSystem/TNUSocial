@@ -13,4 +13,11 @@
 #pragma mark - Link API
 NSString *const URL_LOGIN = @"http://ictu.kingdark.org/api.php?api=login-app";
 
+#pragma mark - Param API
+NSString *const FROM = @"from";
+NSString *const APP_ID = @"app-id";
+NSString *const APP_SECRET = @"app-secret";
+NSString *const USERNAME = @"username";
+NSString *const PASSWORD = @"password";
+
 @end
