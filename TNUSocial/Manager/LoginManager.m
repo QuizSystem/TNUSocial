@@ -25,15 +25,23 @@
                 if (status) {
                     NSString *accessToken = dic[ACCESS_TOKEN];
                     [StoreData setToken:accessToken];
-                    NSLog(@"accessToken = %@", accessToken);
+//                    NSLog(@"accessToken = %@", accessToken);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.delegate didResponseWithMessage:nil withError:nil];
+                    });
                 } else {
                     int code = dic[CODE];
                     NSString *msg = dic[MSG];
                     NSLog(@"code = %d", code);
                     NSLog(@"msg = %@", msg);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.delegate didResponseWithMessage:msg withError:nil];
+                    });
                 }
             } else {
-                NSLog(@"Error");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.delegate didResponseWithMessage:@"Error" withError:error];
+                });
             }
     }];
 }
