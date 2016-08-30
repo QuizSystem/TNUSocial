@@ -7,6 +7,7 @@
 //
 
 #import "DetailDayViewController.h"
+#import "MyConst.h"
 
 @interface DetailDayViewController ()
 - (IBAction)btBack:(id)sender;
@@ -81,16 +82,7 @@
 }
 
 - (IBAction)btToday:(id)sender {
-    NSLog(@"Today");
-    NSDate *date1 = [NSDate date];
-    NSDate *date2 = self.dateSelected;
-    NSTimeInterval secondsBetween = [date2 timeIntervalSinceDate:date1];
-    NSUInteger numberOfDays = secondsBetween / 86400;
-//    NSLog(@"There are %d days in between the two dates.", numberOfDays);
-//    self.index = self.index + numberOfDays;
-//    self.dateSelected = date1;
-//    [self setText];
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:GO_TODAY_DETAIL_DAY object:nil];
 }
 
 @end

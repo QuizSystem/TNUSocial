@@ -8,6 +8,7 @@
 
 #import "RootDayViewController.h"
 #import "DetailDayViewController.h"
+#import "MyConst.h"
 
 @interface RootDayViewController ()
 {
@@ -20,6 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initViewChildWithIndex:0];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    // Receive Notification
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goTodayDetailDay)
+        name:GO_TODAY_DETAIL_DAY object:nil];
+}
+
+- (void)goTodayDetailDay {
+    self.dateSelected = [NSDate date];
+    [self initViewChildWithIndex:0];
+}
+
+- (void)initViewChildWithIndex:(NSUInteger)index {
     viewControllers = [[NSMutableArray alloc]init];
     // Xác định Kiểu chuyển hướng và xác định hướng chuyển đổi!
     // Kiểu cuộn trang
@@ -30,16 +48,13 @@
     self.pageController.dataSource = self;
     // xet full Screen
     [[self.pageController view] setFrame:[[self view] bounds]];
-    // tao trang thu 0 va tren index cho no
-    NSUInteger position = 0;
-    DetailDayViewController *initialViewController = [self viewControllerAtIndex:position];
+    // tao trang thu index va tren index cho no
+    DetailDayViewController *initialViewController = [self viewControllerAtIndex:index];
     //
     [viewControllers addObject:initialViewController];
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward
         animated:NO completion:nil];
-    
     [self addChildViewController:self.pageController];
-    
     [[self view] addSubview:[self.pageController view]];
 }
 
@@ -75,6 +90,10 @@
     detailDayViewController.dateSelected = newDate;
     
     return detailDayViewController;
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
