@@ -20,7 +20,16 @@
     [NetworkConnection responseWithUrl:urlLogin method:POST params:paramLogin
         resultRequest:^(NSDictionary *dic, NSError *error) {
             if (!error && dic) {
-                NSLog(@"dic = %@", dic);
+                BOOL status = dic[STATUS];
+                if (status) {
+                    NSString *accessToken = dic[ACCESS_TOKEN];
+                    NSLog(@"accessToken = %@", accessToken);
+                } else {
+                    int code = dic[CODE];
+                    NSString *msg = dic[MSG];
+                    NSLog(@"code = %d", code);
+                    NSLog(@"msg = %@", msg);
+                }
             } else {
                 NSLog(@"Error");
             }
