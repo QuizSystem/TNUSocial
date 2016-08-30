@@ -5,4 +5,5 @@ target 'TNUSocial' do
 pod 'iOS-Slide-Menu'
 pod 'SDWebImage'
 pod 'TPKeyboardAvoiding'
+pod 'UICKeyChainStore'
 end

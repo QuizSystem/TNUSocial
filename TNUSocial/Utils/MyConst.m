@@ -31,6 +31,11 @@ NSString *const SEMESTER = @"semester";
 NSString *const EXAMINATION = @"examination";
 NSString *const SESSION = @"session";
 
+#pragma mark - Param Reponse
+NSString *const STATUS = @"status";
+NSString *const CODE = @"code";
+NSString *const MSG = @"msg";
+
 #pragma mark - Value Define
 NSString *const APP_ID_VALUE = @"475681656679";
 NSString *const APP_SECRET_VALUE = @"LsO189xl1p5b5673t87pQ05w6d3k9KeP";

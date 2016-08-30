@@ -31,6 +31,11 @@ extern NSString *const SEMESTER;
 extern NSString *const EXAMINATION;
 extern NSString *const SESSION;
 
+#pragma mark - Param Reponse
+extern NSString *const STATUS;
+extern NSString *const CODE;
+extern NSString *const MSG;
+
 #pragma mark - Value Define
 extern NSString *const APP_ID_VALUE;
 extern NSString *const APP_SECRET_VALUE;
