@@ -9,6 +9,7 @@
 #import "LoginManager.h"
 #import "NetworkConnection.h"
 #import "MyConst.h"
+#import "StoreData.h"
 
 @implementation LoginManager
 
@@ -23,6 +24,7 @@
                 BOOL status = dic[STATUS];
                 if (status) {
                     NSString *accessToken = dic[ACCESS_TOKEN];
+                    [StoreData setToken:accessToken];
                     NSLog(@"accessToken = %@", accessToken);
                 } else {
                     int code = dic[CODE];

@@ -40,6 +40,7 @@ extern NSString *const MSG;
 extern NSString *const APP_ID_VALUE;
 extern NSString *const APP_SECRET_VALUE;
 extern NSString *const DOMAIN_VALLUE;
+extern NSString *const KEYCHAIN_KEY_SERVICE;
 
 #pragma mark - Const for NSNotification
 extern NSString *const GO_TODAY_DETAIL_DAY;

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C70F71D6F202800BAD186 /* UIColor+HexString.m */; };
 		517C71061D6F338D00BAD186 /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C71051D6F338D00BAD186 /* today.png */; };
+		51AF43C11D75BC470038DC38 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AF43C01D75BC470038DC38 /* StoreData.m */; };
 		51DADE8F1D7498240021C932 /* NetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE8E1D7498240021C932 /* NetworkConnection.m */; };
 		51DADE931D749A9A0021C932 /* MyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE921D749A9A0021C932 /* MyConst.m */; };
 		51DADE971D74A2050021C932 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DADE961D74A2050021C932 /* LoginManager.m */; };
@@ -40,6 +41,8 @@
 		517C70F61D6F202700BAD186 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "Lib/FCalendarLib/UIColor+HexString.h"; sourceTree = "<group>"; };
 		517C70F71D6F202800BAD186 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "Lib/FCalendarLib/UIColor+HexString.m"; sourceTree = "<group>"; };
 		517C71051D6F338D00BAD186 /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = today.png; path = Resources/Images/today.png; sourceTree = "<group>"; };
+		51AF43BF1D75BC470038DC38 /* StoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreData.h; path = Utils/StoreData.h; sourceTree = "<group>"; };
+		51AF43C01D75BC470038DC38 /* StoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreData.m; path = Utils/StoreData.m; sourceTree = "<group>"; };
 		51DADE8D1D7498240021C932 /* NetworkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConnection.h; path = Network/NetworkConnection.h; sourceTree = "<group>"; };
 		51DADE8E1D7498240021C932 /* NetworkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkConnection.m; path = Network/NetworkConnection.m; sourceTree = "<group>"; };
 		51DADE911D749A9A0021C932 /* MyConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyConst.h; path = Utils/MyConst.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				51DADE911D749A9A0021C932 /* MyConst.h */,
 				51DADE921D749A9A0021C932 /* MyConst.m */,
+				51AF43BF1D75BC470038DC38 /* StoreData.h */,
+				51AF43C01D75BC470038DC38 /* StoreData.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
 				F83C65401D69D4440074200A /* FDateUtility.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
+				51AF43C11D75BC470038DC38 /* StoreData.m in Sources */,
 				51DADE931D749A9A0021C932 /* MyConst.m in Sources */,
 				F83C65341D69D3C80074200A /* FCalendarView.m in Sources */,
 				51DADE971D74A2050021C932 /* LoginManager.m in Sources */,
