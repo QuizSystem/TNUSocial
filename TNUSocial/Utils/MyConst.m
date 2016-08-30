@@ -36,4 +36,7 @@ NSString *const APP_ID_VALUE = @"475681656679";
 NSString *const APP_SECRET_VALUE = @"LsO189xl1p5b5673t87pQ05w6d3k9KeP";
 NSString *const DOMAIN_VALLUE = @"http://ictu.kingdark.org/api.php";
 
+#pragma mark - Const for NSNotification
+NSString *const GO_TODAY_DETAIL_DAY = @"GO_TODAY_DETAIL_DAY";
+
 @end

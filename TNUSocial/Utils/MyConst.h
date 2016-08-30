@@ -36,4 +36,7 @@ extern NSString *const APP_ID_VALUE;
 extern NSString *const APP_SECRET_VALUE;
 extern NSString *const DOMAIN_VALLUE;
 
+#pragma mark - Const for NSNotification
+extern NSString *const GO_TODAY_DETAIL_DAY;
+
 @end
