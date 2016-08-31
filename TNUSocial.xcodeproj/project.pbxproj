@@ -31,6 +31,9 @@
 		F83C653D1D69D42A0074200A /* FDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653C1D69D42A0074200A /* FDayView.m */; };
 		F83C65401D69D4440074200A /* FDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C653F1D69D4440074200A /* FDateUtility.m */; };
 		F83C65431D69D45B0074200A /* FCalendarSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C65421D69D45B0074200A /* FCalendarSingleton.m */; };
+		F87F699E1D7744A9000422CB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F87F699D1D7744A9000422CB /* libsqlite3.0.tbd */; };
+		F87F69A01D7744BD000422CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F87F699F1D7744BD000422CB /* libsqlite3.tbd */; };
+		F87F69A31D7744EE000422CB /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F87F69A21D7744EE000422CB /* DBManager.m */; };
 		F8A669991D732B1A0032652D /* DetailDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A669971D732B1A0032652D /* DetailDayViewController.m */; };
 		F8A6699A1D732B1A0032652D /* DetailDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A669981D732B1A0032652D /* DetailDayViewController.xib */; };
 		F8E244A91D71C2C800EF3B58 /* Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E244A81D71C2C800EF3B58 /* Day.storyboard */; };
@@ -84,6 +87,10 @@
 		F83C653F1D69D4440074200A /* FDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDateUtility.m; path = Lib/FCalendarLib/FDateUtility.m; sourceTree = "<group>"; };
 		F83C65411D69D45B0074200A /* FCalendarSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCalendarSingleton.h; path = Lib/FCalendarLib/FCalendarSingleton.h; sourceTree = "<group>"; };
 		F83C65421D69D45B0074200A /* FCalendarSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCalendarSingleton.m; path = Lib/FCalendarLib/FCalendarSingleton.m; sourceTree = "<group>"; };
+		F87F699D1D7744A9000422CB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F87F699F1D7744BD000422CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F87F69A11D7744EE000422CB /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = Manager/DBManager.h; sourceTree = "<group>"; };
+		F87F69A21D7744EE000422CB /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = Manager/DBManager.m; sourceTree = "<group>"; };
 		F8A669961D732B1A0032652D /* DetailDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailDayViewController.h; path = Controller/DetailDay/DetailDayViewController.h; sourceTree = "<group>"; };
 		F8A669971D732B1A0032652D /* DetailDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailDayViewController.m; path = Controller/DetailDay/DetailDayViewController.m; sourceTree = "<group>"; };
 		F8A669981D732B1A0032652D /* DetailDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailDayViewController.xib; path = Controller/DetailDay/DetailDayViewController.xib; sourceTree = "<group>"; };
@@ -97,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87F69A01D7744BD000422CB /* libsqlite3.tbd in Frameworks */,
+				F87F699E1D7744A9000422CB /* libsqlite3.0.tbd in Frameworks */,
 				5CDE58138B9407EAC45E8AD9 /* libPods-TNUSocial.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +165,8 @@
 				51DADE961D74A2050021C932 /* LoginManager.m */,
 				51AF43C21D75C0180038DC38 /* LichHocManager.h */,
 				51AF43C31D75C0180038DC38 /* LichHocManager.m */,
+				F87F69A11D7744EE000422CB /* DBManager.h */,
+				F87F69A21D7744EE000422CB /* DBManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -163,6 +174,8 @@
 		96BD92A6C1992BD00C8EF1D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F87F699F1D7744BD000422CB /* libsqlite3.tbd */,
+				F87F699D1D7744A9000422CB /* libsqlite3.0.tbd */,
 				AB2E35B6D5E7D7E7BA15D410 /* libPods-TNUSocial.a */,
 			);
 			name = Frameworks;
@@ -430,6 +443,7 @@
 				F8A669991D732B1A0032652D /* DetailDayViewController.m in Sources */,
 				517C70F81D6F202800BAD186 /* UIColor+HexString.m in Sources */,
 				F8118CAB1D682A53001180DC /* AppDelegate.m in Sources */,
+				F87F69A31D7744EE000422CB /* DBManager.m in Sources */,
 				F83C65401D69D4440074200A /* FDateUtility.m in Sources */,
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
 				51AF43C11D75BC470038DC38 /* StoreData.m in Sources */,
