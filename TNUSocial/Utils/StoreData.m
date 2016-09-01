@@ -34,4 +34,20 @@
     [chain removeItemForKey:@"token"];
 }
 
+#pragma mark - Lich Hoc
++ (NSDictionary *)getLichHoc {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults objectForKey:@"lich_hoc"];
+}
+
++ (void)setLichHoc:(NSDictionary *)lichHoc {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:lichHoc forKey:@"lich_hoc"];
+}
+
++ (void)clearLichHoc {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     [defaults removeObjectForKey:@"lich_hoc"];
+}
+
 @end

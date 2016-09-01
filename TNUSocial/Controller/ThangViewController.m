@@ -10,6 +10,7 @@
 #import "FCalendarView.h"
 #import "FDateUtility.h"
 #import "RootDayViewController.h"
+#import "StoreData.h"
 
 @interface ThangViewController () <FCalendarDelegate>
 @property (weak, nonatomic) IBOutlet FCalendarView *calView;
@@ -22,8 +23,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setValueButtonToday];
-    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
+    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:YES dayViewHeight:-1];
     self.calView.delegate = self;
+ 
+    NSDictionary *data = [StoreData getLichHoc];
+    // array semester
+    NSDictionary *semester = data[@"semester"];
+    // node current
+    NSDictionary *current = data[@"current"];
+    // child of node current
+    NSDictionary *subject = current[@"subject"];
+    NSDictionary *table = current[@"table"];
+    NSString *semesterString = current[@"semester"];
+    NSLog(@"subject = %@", subject);
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -52,7 +65,7 @@
 
 #pragma mark - Event click button Today
 - (IBAction)btToday:(id)sender {
-    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:NO dayViewHeight:-1];
+    [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:YES dayViewHeight:-1];
 }
 
 @end
