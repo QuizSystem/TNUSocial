@@ -17,4 +17,11 @@
 
 + (void)clearToken;
 
+#pragma mark - Lich Hoc
++ (NSDictionary *)getLichHoc;
+
++ (void)setLichHoc:(NSDictionary *)lichHoc;
+
++ (void)clearLichHoc;
+
 @end
