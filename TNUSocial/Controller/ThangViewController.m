@@ -26,16 +26,16 @@
     [self.calView setDataWithCalendar:nil monthDisplay:[NSDate date] dateSelected:nil showDayOff:YES dayViewHeight:-1];
     self.calView.delegate = self;
  
-    NSDictionary *data = [StoreData getLichHoc];
-    // array semester
-    NSDictionary *semester = data[@"semester"];
-    // node current
-    NSDictionary *current = data[@"current"];
-    // child of node current
-    NSDictionary *subject = current[@"subject"];
-    NSDictionary *table = current[@"table"];
-    NSString *semesterString = current[@"semester"];
-    NSLog(@"subject = %@", subject);
+//    NSDictionary *data = [StoreData getLichHoc];
+//    // array semester
+//    NSDictionary *semester = data[@"semester"];
+//    // node current
+//    NSDictionary *current = data[@"current"];
+//    // child of node current
+//    NSDictionary *subject = current[@"subject"];
+//    NSDictionary *table = current[@"table"];
+//    NSString *semesterString = current[@"semester"];
+//    NSLog(@"subject = %@", subject);
 
 }
 

@@ -9,6 +9,7 @@
 #import "RootDayViewController.h"
 #import "DetailDayViewController.h"
 #import "MyConst.h"
+#import "StoreData.h"
 
 @interface RootDayViewController ()
 {
@@ -22,6 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initViewChildWithIndex:0];
+    
+//    NSDictionary *data = [StoreData getLichHoc];
+//    // array semester
+//    NSDictionary *semester = data[@"semester"];
+//    // node current
+//    NSDictionary *current = data[@"current"];
+//    // child of node current
+//    NSDictionary *subject = current[@"subject"];
+//    NSDictionary *table = current[@"table"];
+//    NSString *semesterString = current[@"semester"];
+//    NSLog(@"table = %@", table);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
