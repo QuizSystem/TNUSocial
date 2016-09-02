@@ -8,6 +8,7 @@
 
 #import "DetailDayViewController.h"
 #import "MyConst.h"
+#import "StoreData.h"
 
 @interface DetailDayViewController ()
 - (IBAction)btBack:(id)sender;
@@ -17,6 +18,23 @@
 @property (weak, nonatomic) IBOutlet UILabel *dayOfMonth;
 @property (weak, nonatomic) IBOutlet UILabel *monthYear;
 @property (weak, nonatomic) IBOutlet UIButton *btToday;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbMon1;
+@property (weak, nonatomic) IBOutlet UILabel *lbMon2;
+@property (weak, nonatomic) IBOutlet UILabel *lbMon3;
+@property (weak, nonatomic) IBOutlet UILabel *lbTen1;
+@property (weak, nonatomic) IBOutlet UILabel *lbTen2;
+@property (weak, nonatomic) IBOutlet UILabel *lbTen3;
+@property (weak, nonatomic) IBOutlet UILabel *lbTime1;
+@property (weak, nonatomic) IBOutlet UILabel *lbTime2;
+@property (weak, nonatomic) IBOutlet UILabel *lbTime3;
+@property (weak, nonatomic) IBOutlet UILabel *lbPlace1;
+@property (weak, nonatomic) IBOutlet UILabel *lbPlace2;
+@property (weak, nonatomic) IBOutlet UILabel *lbPlace3;
+@property (weak, nonatomic) IBOutlet UIView *view1;
+@property (weak, nonatomic) IBOutlet UIView *view2;
+@property (weak, nonatomic) IBOutlet UIView *view3;
+
 @end
 
 @implementation DetailDayViewController
@@ -30,6 +48,9 @@
 //    NSString *thu = [formatter stringFromDate:self.dateSelected];
 //    self.Screenindex.text=[[NSString alloc]initWithFormat:@"Screen %ld. Date = %@",(long)self.index, thu];
     
+    self.view1.hidden = YES;
+    self.view2.hidden = YES;
+    self.view3.hidden = YES;
     [self setText];
 }
 
@@ -39,6 +60,7 @@
     [self setTextDayOfMonth];
     [self setTextMonthYear];
     [self setTextButtonToday];
+    [self setLichHoc];
 }
 
 - (void)setTextDayOfWeek {
@@ -70,6 +92,54 @@
     [formatter setDateFormat:@"dd"];
     NSString *today = [formatter stringFromDate:[NSDate date]];
     [self.btToday setTitle:today forState:UIControlStateNormal];
+}
+
+- (void)setLichHoc {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSString *ngayChon = [formatter stringFromDate:self.dateSelected];
+    
+    NSDictionary *data = [StoreData getLichHoc];
+    // array semester
+    NSDictionary *semester = data[@"semester"];
+    // node current
+    NSDictionary *current = data[@"current"];
+    // child of node current
+    NSDictionary *subject = current[@"subject"];
+    NSDictionary *table = current[@"table"];
+    NSString *semesterString = current[@"semester"];
+    NSLog(@"table = %@", table);
+    int i = 0;
+    for (NSDictionary *childTable in table) {
+        NSString *subjectId = childTable[@"subjectId"];
+        NSString *subjectPlace = childTable[@"subjectPlace"];
+        NSString *subjectTime = childTable[@"subjectTime"];
+        NSString *subjectDate = childTable[@"subjectDate"];
+        if ([subjectDate isEqualToString:ngayChon]) {
+            i++;
+            if (i == 1) {
+                self.view1.hidden = NO;
+                self.lbMon1.text = subjectId;
+                self.lbTen1.text = subjectPlace;
+                self.lbTime1.text = subjectTime;
+                self.lbPlace1.text = subjectDate;
+            }
+            if (i == 2) {
+                self.view2.hidden = NO;
+                self.lbMon2.text = subjectId;
+                self.lbTen2.text = subjectPlace;
+                self.lbTime2.text = subjectTime;
+                self.lbPlace2.text = subjectDate;
+            }
+            if (i == 3) {
+                self.view3.hidden = NO;
+                self.lbMon3.text = subjectId;
+                self.lbTen3.text = subjectPlace;
+                self.lbTime3.text = subjectTime;
+                self.lbPlace3.text = subjectDate;
+            }
+        }
+    }
 }
 
 - (IBAction)btBack:(id)sender {
