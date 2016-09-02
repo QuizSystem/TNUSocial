@@ -119,24 +119,42 @@
             i++;
             if (i == 1) {
                 self.view1.hidden = NO;
-                self.lbMon1.text = subjectId;
-                self.lbTen1.text = subjectPlace;
+//                self.lbMon1.text = subjectId;
+//                self.lbTen1.text = subjectDate;
                 self.lbTime1.text = subjectTime;
-                self.lbPlace1.text = subjectDate;
+                self.lbPlace1.text = subjectPlace;
+                for (NSDictionary *childSubject in subject) {
+                    if ([childSubject[@"subjectId"] isEqualToString:subjectId]) {
+                        self.lbMon1.text = childSubject[@"subjectName"];
+                        self.lbTen1.text = childSubject[@"subjectTeacher"];
+                    }
+                }
             }
             if (i == 2) {
                 self.view2.hidden = NO;
-                self.lbMon2.text = subjectId;
-                self.lbTen2.text = subjectPlace;
+//                self.lbMon2.text = subjectId;
+//                self.lbTen2.text = subjectDate;
                 self.lbTime2.text = subjectTime;
-                self.lbPlace2.text = subjectDate;
+                self.lbPlace2.text = subjectPlace;
+                for (NSDictionary *childSubject in subject) {
+                    if ([childSubject[@"subjectId"] isEqualToString:subjectId]) {
+                        self.lbMon2.text = childSubject[@"subjectName"];
+                        self.lbTen2.text = childSubject[@"subjectTeacher"];
+                    }
+                }
             }
             if (i == 3) {
                 self.view3.hidden = NO;
-                self.lbMon3.text = subjectId;
-                self.lbTen3.text = subjectPlace;
+//                self.lbMon3.text = subjectId;
+//                self.lbTen3.text = subjectDate;
                 self.lbTime3.text = subjectTime;
-                self.lbPlace3.text = subjectDate;
+                self.lbPlace3.text = subjectPlace;
+                for (NSDictionary *childSubject in subject) {
+                    if ([childSubject[@"subjectId"] isEqualToString:subjectId]) {
+                        self.lbMon3.text = childSubject[@"subjectName"];
+                        self.lbTen3.text = childSubject[@"subjectTeacher"];
+                    }
+                }
             }
         }
     }
