@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfMatKhau;
 @property (weak, nonatomic) IBOutlet UIButton *btDangNhap;
 - (IBAction)btDangNhap:(id)sender;
+- (IBAction)btBack:(id)sender;
+
 @end
 
 @implementation DangNhapViewController
@@ -26,6 +28,11 @@
     NSLog(@"Dang nhap");
     NSLog(@"%@", self.tfMaSinHVien.text);
     NSLog(@"%@", self.tfMatKhau.text);
+}
+
+- (IBAction)btBack:(id)sender {
+    NSLog(@"Back");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
