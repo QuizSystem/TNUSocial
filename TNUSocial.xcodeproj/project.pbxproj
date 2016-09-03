@@ -20,6 +20,8 @@
 		F8118CB31D682A53001180DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8118CB21D682A53001180DC /* Assets.xcassets */; };
 		F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8118CB41D682A53001180DC /* LaunchScreen.storyboard */; };
 		F8118CBF1D682C49001180DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8118CBE1D682C49001180DC /* Main.storyboard */; };
+		F82A156A1D7ABC6500F8271C /* DangNhap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F82A15691D7ABC6500F8271C /* DangNhap.storyboard */; };
+		F82A156D1D7ABF2B00F8271C /* DangNhapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82A156C1D7ABF2B00F8271C /* DangNhapViewController.m */; };
 		F83C64E01D6863D90074200A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64DF1D6863D90074200A /* MenuViewController.m */; };
 		F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F01D68D9B60074200A /* ThangViewController.m */; };
 		F83C64F41D68D9CD0074200A /* ThongBaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83C64F31D68D9CD0074200A /* ThongBaoViewController.m */; };
@@ -65,6 +67,9 @@
 		F8118CB51D682A53001180DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8118CB71D682A54001180DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8118CBE1D682C49001180DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = UI/Main.storyboard; sourceTree = "<group>"; };
+		F82A15691D7ABC6500F8271C /* DangNhap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DangNhap.storyboard; path = UI/DangNhap.storyboard; sourceTree = "<group>"; };
+		F82A156B1D7ABF2B00F8271C /* DangNhapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DangNhapViewController.h; path = Controller/DangNhapViewController.h; sourceTree = "<group>"; };
+		F82A156C1D7ABF2B00F8271C /* DangNhapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DangNhapViewController.m; path = Controller/DangNhapViewController.m; sourceTree = "<group>"; };
 		F83C64DE1D6863D90074200A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controller/MenuViewController.h; sourceTree = "<group>"; };
 		F83C64DF1D6863D90074200A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controller/MenuViewController.m; sourceTree = "<group>"; };
 		F83C64EF1D68D9B60074200A /* ThangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThangViewController.h; path = Controller/ThangViewController.h; sourceTree = "<group>"; };
@@ -233,6 +238,7 @@
 			children = (
 				F8118CBE1D682C49001180DC /* Main.storyboard */,
 				F8E244A81D71C2C800EF3B58 /* Day.storyboard */,
+				F82A15691D7ABC6500F8271C /* DangNhap.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -300,6 +306,8 @@
 				F83C64F61D68D9E40074200A /* GhiChuViewController.m */,
 				F8E244AA1D71C2EF00EF3B58 /* RootDayViewController.h */,
 				F8E244AB1D71C2EF00EF3B58 /* RootDayViewController.m */,
+				F82A156B1D7ABF2B00F8271C /* DangNhapViewController.h */,
+				F82A156C1D7ABF2B00F8271C /* DangNhapViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8118CB61D682A53001180DC /* LaunchScreen.storyboard in Resources */,
+				F82A156A1D7ABC6500F8271C /* DangNhap.storyboard in Resources */,
 				517C71061D6F338D00BAD186 /* today.png in Resources */,
 				F8A6699A1D732B1A0032652D /* DetailDayViewController.xib in Resources */,
 				F8E244A91D71C2C800EF3B58 /* Day.storyboard in Resources */,
@@ -448,6 +457,7 @@
 				F83C64F11D68D9B60074200A /* ThangViewController.m in Sources */,
 				51AF43C11D75BC470038DC38 /* StoreData.m in Sources */,
 				51DADE931D749A9A0021C932 /* MyConst.m in Sources */,
+				F82A156D1D7ABF2B00F8271C /* DangNhapViewController.m in Sources */,
 				F83C65341D69D3C80074200A /* FCalendarView.m in Sources */,
 				51DADE971D74A2050021C932 /* LoginManager.m in Sources */,
 				51AF43C41D75C0180038DC38 /* LichHocManager.m in Sources */,
