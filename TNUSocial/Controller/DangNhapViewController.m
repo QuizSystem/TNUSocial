@@ -42,6 +42,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Turn Off Keyboard
+- (IBAction)turnOffKeyboard:(id)sender {
+    [self.view endEditing:YES];
+}
+
 #pragma mark - LoginManagerDelegate
 - (void)didResponseSuccess {
     NSLog(@"Thanh cong");

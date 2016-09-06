@@ -29,13 +29,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-d1-opR">
-                                <rect key="frame" x="91" y="30" width="83.5" height="21"/>
+                                <rect key="frame" x="91" y="30" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã sinh viên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBO-G3-VZO">
-                                <rect key="frame" x="24" y="82" width="95.5" height="21"/>
+                                <rect key="frame" x="24" y="82" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,6 +65,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xJv-W4-50G" firstAttribute="leading" secondItem="kwM-PN-6rb" secondAttribute="leading" constant="20" id="1fm-mo-bvs"/>
                             <constraint firstAttribute="trailing" secondItem="ZYT-IG-ILa" secondAttribute="trailing" constant="20" id="4Ud-Mn-1Oo"/>
@@ -84,6 +85,9 @@
                             <constraint firstAttribute="trailing" secondItem="SLD-ka-O1d" secondAttribute="trailing" constant="20" id="wa5-9x-OfQ"/>
                             <constraint firstItem="ZYT-IG-ILa" firstAttribute="top" secondItem="SLD-ka-O1d" secondAttribute="bottom" constant="34" id="wkC-iu-i9b"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="p5R-wA-QWb" appends="YES" id="Ycx-5f-o6F"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -93,6 +97,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qId-FF-19u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p5R-wA-QWb">
+                    <connections>
+                        <action selector="turnOffKeyboard:" destination="Wg9-vq-y0T" id="9Uz-NO-Fjj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="413" y="-115"/>
         </scene>
