@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol LoginManagerDelegate
-- (void)didResponseWithMessage:(NSString *)message withError:(NSError *)error;
+- (void)didResponseSuccess;
+- (void)didResponseFail;
 @end
 
 @interface LoginManager : NSObject
