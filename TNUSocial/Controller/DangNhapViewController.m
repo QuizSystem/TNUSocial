@@ -7,8 +7,11 @@
 //
 
 #import "DangNhapViewController.h"
+#import "LoginManager.h"
+#import "StoreData.h"
+#import "LichHocManager.h"
 
-@interface DangNhapViewController ()
+@interface DangNhapViewController () <LoginManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *tfMaSinHVien;
 @property (weak, nonatomic) IBOutlet UITextField *tfMatKhau;
 @property (weak, nonatomic) IBOutlet UIButton *btDangNhap;
@@ -25,14 +28,27 @@
 }
 
 - (IBAction)btDangNhap:(id)sender {
-    NSLog(@"Dang nhap");
-    NSLog(@"%@", self.tfMaSinHVien.text);
-    NSLog(@"%@", self.tfMatKhau.text);
+    LoginManager *loginManager = [[LoginManager alloc] init];
+    loginManager.delegate = self;
+    
+//    [loginManager loginWithFrom:@"DTC" appId:@"475681656679" appSecret:@"LsO189xl1p5b5673t87pQ05w6d3k9KeP"
+//        username:@"DTC155D4801030035" password:@"nguyenbaotram00"];
+    [loginManager loginWithFrom:@"DTC" appId:@"475681656679" appSecret:@"LsO189xl1p5b5673t87pQ05w6d3k9KeP"
+        username:self.tfMaSinHVien.text password:self.tfMatKhau.text];
 }
 
 - (IBAction)btBack:(id)sender {
     NSLog(@"Back");
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - LoginManagerDelegate
+- (void)didResponseSuccess {
+    NSLog(@"Thanh cong");
+}
+
+- (void)didResponseFail {
+    NSLog(@"That bai");
 }
 
 @end
